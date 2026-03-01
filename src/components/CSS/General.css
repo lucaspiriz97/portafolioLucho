@@ -1,0 +1,19 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quinsi", serif;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.6;
+  /*font-weight: bold;*/
+}
+
+body, main {
+  margin: 0;
+  padding: 0;
+}
