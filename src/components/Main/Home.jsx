@@ -3,6 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css"; // Asegúrate de tener esto en tu proyecto
 import "./Diseño/Home.css";
 import Card from "react-bootstrap/Card";
+import { Row, Col, Container } from "react-bootstrap";
 
 const fotos = [
   {
@@ -43,28 +44,48 @@ const dataCartas = [
     titulo: "Foto autoral",
     alt: "Foto autoral",
     src: "/img/fotos_lucho/FOTO AUTORAL/00-2.jpg",
-    descripcion: "foto sacada en la calle con un lente muy bueno corte perri loki naya",
+    descripcion:
+      "foto sacada en la calle con un lente muy bueno corte perri loki naya",
   },
   {
-    id: 1,
+    id: 2,
     titulo: "Foto autoral",
     alt: "Foto autoral",
-    src: "/img/fotos_lucho/FOTO AUTORAL/00-2.jpg",
-    descripcion: "foto sacada en la calle con un lente muy bueno corte perri loki naya",
+    src: "/img/fotos_lucho/FOTO AUTORAL/00.jpg",
+    descripcion:
+      "foto sacada en la calle con un lente muy bueno corte perri loki naya",
   },
   {
-    id: 1,
+    id: 3,
     titulo: "Foto autoral",
     alt: "Foto autoral",
-    src: "/img/fotos_lucho/FOTO AUTORAL/00-2.jpg",
-    descripcion: "foto sacada en la calle con un lente muy bueno corte perri loki naya",
+    src: "/img/fotos_lucho/FOTO AUTORAL/0198.jpg",
+    descripcion:
+      "foto sacada en la calle con un lente muy bueno corte perri loki naya",
   },
   {
-    id: 1,
+    id: 4,
     titulo: "Foto autoral",
     alt: "Foto autoral",
-    src: "/img/fotos_lucho/FOTO AUTORAL/00-2.jpg",
-    descripcion: "foto sacada en la calle con un lente muy bueno corte perri loki naya",
+    src: "/img/fotos_lucho/FOTO AUTORAL/00-3.jpg",
+    descripcion:
+      "foto sacada en la calle con un lente muy bueno corte perri loki naya",
+  },
+  {
+    id: 5,
+    titulo: "Foto autoral",
+    alt: "Foto autoral",
+    src: "/img/fotos_lucho/FOTO AUTORAL/00-4.jpg",
+    descripcion:
+      "foto sacada en la calle con un lente muy bueno corte perri loki naya",
+  },
+  {
+    id: 6,
+    titulo: "Foto autoral",
+    alt: "Foto autoral",
+    src: "/img/fotos_lucho/FOTO AUTORAL/0198-9.jpg",
+    descripcion:
+      "foto sacada en la calle con un lente muy bueno corte perri loki naya",
   },
 ];
 
@@ -88,19 +109,22 @@ const Home = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-    <div className="cartas">
-    {dataCartas.map((cartas) =>(
-      <Card style={{ width: "25rem" }} key={cartas.id} className="cartasInt" >
-        <Card.Img variant="top" src={cartas.src}/>
-          <Card.Body>
-            <Card.Title>{cartas.titulo}</Card.Title>
-              <Card.Text>
-                {cartas.descripcion}
-              </Card.Text>
-          </Card.Body>
-      </Card>
-    ))}
-    </div>
+
+      <div className="cartas">
+        <Row xs={1} sm={2} md={3} className="g-3">
+          {dataCartas.map((carta, index) => (
+            <Col key={carta.id}>
+              <Card className="cartasInt h-100">
+                <Card.Img variant="top" src={carta.src} />
+                <Card.Body>
+                  <Card.Title className="fw-bold">{carta.titulo}</Card.Title>
+                  <Card.Text>{carta.descripcion}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
     </main>
   );
 };
