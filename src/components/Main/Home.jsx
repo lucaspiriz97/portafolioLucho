@@ -4,35 +4,46 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Asegúrate de tener esto en tu
 import "./Diseño/Home.css";
 import Card from "react-bootstrap/Card";
 import { Row, Col, Container } from "react-bootstrap";
+import img1 from "/img/fotos_lucho/FOTO AUTORAL/IMG_8364.jpg";
+import img2 from "/img/fotos_lucho/FOTO AUTORAL/IMG_8430.jpg";
+import img3 from "/img/fotos_lucho/FOTO FIJA/RUGE/RUGE_LUCIO_CANEVA_-8.jpg";
+import img4 from "/img/fotos_lucho/FOTO FIJA/RUGE/RUGE_LUCIO_CANEVA_-28.jpg";
+import img5 from "/img/fotos_lucho/OBRA DE TEATRO/IMG_4991.jpg";
+import img6 from "/img/fotos_lucho/FOTO AUTORAL/00-2.jpg";
+import img7 from "/img/fotos_lucho/FOTO AUTORAL/00.jpg";
+import img8 from "/img/fotos_lucho/FOTO AUTORAL/0198.jpg";
+import img9 from "/img/fotos_lucho/FOTO AUTORAL/00-3.jpg";
+import img10 from "/img/fotos_lucho/FOTO AUTORAL/00-4.jpg";
+import img11 from "/img/fotos_lucho/FOTO AUTORAL/0198-9.jpg";
 
 const fotos = [
   {
     id: 1,
-    src: "/img/fotos_lucho/FOTO AUTORAL/IMG_8364.jpg",
+    src: img1,
     alt: "Foto autoral",
     caption: "Centro porteño",
   },
   {
     id: 2,
-    src: "/img/fotos_lucho/FOTO AUTORAL/IMG_8430.jpg",
+    src: img2,
     alt: "Foto autoral",
     caption: "Centro porteño",
   },
   {
     id: 3,
-    src: "/img/fotos_lucho/FOTO FIJA/RUGE/RUGE_LUCIO_CANEVA_-8.jpg",
+    src: img3,
     alt: "Película",
     caption: "RUGE",
   },
   {
     id: 4,
-    src: "/img/fotos_lucho/FOTO FIJA/RUGE/RUGE_LUCIO_CANEVA_-28.jpg",
+    src: img4,
     alt: "Película",
     caption: "RUGE",
   },
   {
     id: 5,
-    src: "/img/fotos_lucho/OBRA DE TEATRO/IMG_4991.jpg",
+    src: img5,
     alt: "Obra de teatro",
     caption: "Nombre de la obra",
   },
@@ -43,7 +54,7 @@ const dataCartas = [
     id: 1,
     titulo: "Foto autoral",
     alt: "Foto autoral",
-    src: "/img/fotos_lucho/FOTO AUTORAL/00-2.jpg",
+    src: img6,
     descripcion:
       "foto sacada en la calle con un lente muy bueno corte perri loki naya",
   },
@@ -51,7 +62,7 @@ const dataCartas = [
     id: 2,
     titulo: "Foto autoral",
     alt: "Foto autoral",
-    src: "/img/fotos_lucho/FOTO AUTORAL/00.jpg",
+    src: img7,
     descripcion:
       "foto sacada en la calle con un lente muy bueno corte perri loki naya",
   },
@@ -59,7 +70,7 @@ const dataCartas = [
     id: 3,
     titulo: "Foto autoral",
     alt: "Foto autoral",
-    src: "/img/fotos_lucho/FOTO AUTORAL/0198.jpg",
+    src: img8,
     descripcion:
       "foto sacada en la calle con un lente muy bueno corte perri loki naya",
   },
@@ -67,7 +78,7 @@ const dataCartas = [
     id: 4,
     titulo: "Foto autoral",
     alt: "Foto autoral",
-    src: "/img/fotos_lucho/FOTO AUTORAL/00-3.jpg",
+    src: img9,
     descripcion:
       "foto sacada en la calle con un lente muy bueno corte perri loki naya",
   },
@@ -75,7 +86,7 @@ const dataCartas = [
     id: 5,
     titulo: "Foto autoral",
     alt: "Foto autoral",
-    src: "/img/fotos_lucho/FOTO AUTORAL/00-4.jpg",
+    src: img10,
     descripcion:
       "foto sacada en la calle con un lente muy bueno corte perri loki naya",
   },
@@ -83,7 +94,7 @@ const dataCartas = [
     id: 6,
     titulo: "Foto autoral",
     alt: "Foto autoral",
-    src: "/img/fotos_lucho/FOTO AUTORAL/0198-9.jpg",
+    src: img11,
     descripcion:
       "foto sacada en la calle con un lente muy bueno corte perri loki naya",
   },

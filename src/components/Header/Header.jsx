@@ -1,4 +1,3 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Home from '../Main/Home';
@@ -6,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Proyectos from '../Main/Proyectos/Proyectos'; /* AGREGAR SEGUN PROYECTOS */
 import AcercaDeMi from '../Main/AboutUs/AcercaDeMi';
 import './Diseño/Nav.css';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 const Header = () => {
     return (
