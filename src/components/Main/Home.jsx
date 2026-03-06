@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css"; // Asegúrate de tener esto en tu proyecto
 import "./Diseño/Home.css";
 import Card from "react-bootstrap/Card";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 const BASE = process.env.PUBLIC_URL;
 
@@ -118,10 +118,10 @@ const Home = () => {
             <Col key={carta.id}>
               <Card className="cartasInt h-100">
                 <Card.Img variant="top" src={carta.src} />
-                <Card.Body>
+                {/*<Card.Body>
                   <Card.Title className="fw-bold">{carta.titulo}</Card.Title>
                   <Card.Text>{carta.descripcion}</Card.Text>
-                </Card.Body>
+                </Card.Body> */}
               </Card>
             </Col>
           ))}

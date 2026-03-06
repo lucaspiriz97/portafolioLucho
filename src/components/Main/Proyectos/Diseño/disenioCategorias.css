@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:wght@300;400&display=swap');
+
+        .pc-wrap {
+          min-height: 100vh;
+          background: #fff;
+          font-family: 'Raleway', sans-serif;
+          color: #1a1a1a;
+          padding: 0 0 80px;
+        }
+        .pc-header {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          padding: 72px 250px 48px;
+          border-bottom: 1px solid #e0e0e0;
+          margin-bottom: 56px;
+        }
+        .pc-label {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 300;
+          font-size: 11px;
+          letter-spacing: 0.25em;
+          text-transform: uppercase;
+          color: #999;
+          margin: 0 0 10px;
+        }
+        .pc-title {
+          font-family: 'Cormorant Garamond', serif;
+          font-weight: 300;
+          font-size: clamp(42px, 6vw, 80px);
+          line-height: 1;
+          letter-spacing: -0.01em;
+          margin: 0;
+        }
+        .pc-subtitle {
+          font-family: 'Cormorant Garamond', serif;
+          font-style: italic;
+          font-weight: 300;
+          font-size: 18px;
+          color: #777;
+          margin: 8px 0 0;
+        }
+        .pc-count {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 13px;
+          font-weight: 300;
+          letter-spacing: 0.1em;
+          color: #aaa;
+          margin: 0;
+          padding-bottom: 6px;
+        }
+        .pc-grid {
+          padding: 0 250px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        .pc-row {
+          display: flex;
+          gap: 12px;
+          align-items: flex-start;
+        }
+        .pc-item {
+          overflow: hidden;
+          cursor: pointer;
+          position: relative;
+        }
+        .pc-item img {
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+          filter: grayscale(10%);
+        }
+        .pc-item:hover img {
+          transform: scale(1.025);
+          filter: grayscale(0%);
+        }
+        .pc-item-overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0);
+          transition: background 0.4s ease;
+          pointer-events: none;
+        }
+        .pc-item:hover .pc-item-overlay {
+          background: rgba(0,0,0,0.06);
+        }
+        .pc-lightbox {
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.95);
+          z-index: 1000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          animation: lbFadeIn 0.25s ease;
+        }
+        @keyframes lbFadeIn { from { opacity: 0 } to { opacity: 1 } }
+        .pc-lb-img-wrap img {
+          max-width: 90vw;
+          max-height: 88vh;
+          object-fit: contain;
+          display: block;
+          animation: lbImgIn 0.3s ease;
+        }
+        @keyframes lbImgIn { from { opacity: 0; transform: scale(0.97) } to { opacity: 1; transform: scale(1) } }
+        .pc-lb-close {
+          position: fixed;
+          top: 28px; right: 36px;
+          background: none;
+          border: none;
+          color: #fff;
+          font-size: 16px;
+          cursor: pointer;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 300;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          opacity: 0.6;
+          transition: opacity 0.2s;
+          z-index: 1001;
+        }
+        .pc-lb-close:hover { opacity: 1; }
+        .pc-lb-nav {
+          position: fixed;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: rgba(255,255,255,0.4);
+          font-size: 48px;
+          cursor: pointer;
+          padding: 20px;
+          transition: color 0.2s;
+          z-index: 1001;
+          line-height: 1;
+        }
+        .pc-lb-nav:hover { color: #fff; }
+        .pc-lb-nav-prev { left: 16px; }
+        .pc-lb-nav-next { right: 16px; }
+        .pc-lb-counter {
+          position: fixed;
+          bottom: 28px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 13px;
+          font-weight: 300;
+          letter-spacing: 0.25em;
+          color: rgba(255,255,255,0.35);
+          margin: 0;
+        }
+        @media (max-width: 768px) {
+          .pc-header { padding: 48px 24px 36px; flex-direction: column; align-items: flex-start; gap: 12px; }
+          .pc-grid { padding: 0 24px; }
+          .pc-row { flex-direction: column; }
+          .pc-item { flex: 1 1 100% !important; }
+        }
